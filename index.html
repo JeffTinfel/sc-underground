@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SC Underground - O Portal da Cena Independente de SC</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Ícones FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Cabeçalho & Menu de Navegação -->
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <h1>SC <span>UNDERGROUND</span></h1>
+        <p>Música Autoral & Cultura Independente Catarinense</p>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#" class="nav-link active" onclick="showPage('agenda')"><i class="fa-solid fa-calendar-days"></i> Próximos Eventos</a></li>
+          <li><a href="#" class="nav-link" onclick="showPage('passados')"><i class="fa-solid fa-clock-rotate-left"></i> Eventos Realizados</a></li>
+          <li><a href="#" class="nav-link" onclick="showPage('bandas')"><i class="fa-solid fa-guitar"></i> Bandas</a></li>
+          <li><a href="#" class="nav-link btn-nav" onclick="showPage('cadastro-banda')"><i class="fa-solid fa-plus"></i> Cadastrar Banda</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- SEÇÃO 1: PRÓXIMOS EVENTOS -->
+    <section id="agenda" class="page-section active">
+      <div class="section-header">
+        <h2><i class="fa-solid fa-fire"></i> Próximos Festivais & Shows</h2>
+        <p>Acompanhe a agenda dos próximos eventos da cena rock e metal em Santa Catarina</p>
+      </div>
+
+      <div class="events-feed">
+
+        <!-- Evento 1: Halloween Confraria do Rock (31/10) -->
+        <article class="card event-card highlight">
+          <div class="poster-container" onclick="openPosterModal('HALLOWEEN CONFRARIA DO ROCK.jpg')">
+            <img src="HALLOWEEN CONFRARIA DO ROCK.jpg" alt="Cartaz Oficial Halloween Confraria do Rock" class="event-poster">
+            <div class="poster-overlay">
+              <i class="fa-solid fa-magnifying-glass-plus"></i> Clique para ampliar
+            </div>
+          </div>
+
+          <div class="card-header-bg alt-bg">
+            <h3>Halloween Confraria do Rock</h3>
+            <span class="sub-location"><i class="fa-solid fa-location-dot"></i> Caçador / SC</span>
+          </div>
+
+          <div class="card-body">
+            <p><i class="fa-solid fa-calendar-day"></i> <strong>Data:</strong> 31 de Outubro de 2026 (Sábado)</p>
+            <p><i class="fa-solid fa-clock"></i> <strong>Horário:</strong> A partir das 20:00</p>
+            <p><i class="fa-solid fa-map-pin"></i> <strong>Local:</strong> Caçador/SC</p>
+            <p><i class="fa-solid fa-ticket"></i> <strong>Ingressos:</strong> 2º Lote R$ 45,00 (Até 31/10 às 15h)</p>
+            <p><i class="fa-solid fa-skull"></i> <strong>Destaque:</strong> Noite de Halloween com concurso de fantasias e muito Rock 'n' Roll</p>
+            <p><i class="fa-solid fa-handshake"></i> <strong>Realização:</strong> Confraria do Rock | <strong>Patrocínio:</strong> Bellga</p>
+
+            <div class="lineup-box">
+              <h4>Atrações Confirmadas:</h4>
+              <div class="tags-bandas">
+                <a href="#" onclick="showPage('bandas')" class="tag tag-headline"><i class="fa-solid fa-guitar"></i> Don Corleone</a>
+                <a href="#" onclick="showPage('bandas')" class="tag"><i class="fa-solid fa-guitar"></i> Papa's Radio</a>
+              </div>
+            </div>
+
+            <a href="https://www.instagram.com/confraria.do.rock/" target="_blank" class="btn btn-primary">
+              <i class="fa-brands fa-instagram"></i> Mais Infos
+            </a>
+          </div>
+        </article>
+
+        <!-- Evento 2: Halloween Tortuga (31/10) -->
+        <article class="card event-card highlight">
+          <div class="poster-container" onclick="openPosterModal('Halloween Tortuga.jpg')">
+            <img src="Halloween Tortuga.jpg" alt="Cartaz Oficial Halloween Tortuga" class="event-poster">
+            <div class="poster-overlay">
+              <i class="fa-solid fa-magnifying-glass-plus"></i> Clique para ampliar
+            </div>
+          </div>
+
+          <div class="card-header-bg alt-bg">
+            <h3>Halloween Tortuga</h3>
+            <span class="sub-location"><i class="fa-solid fa-location-dot"></i> Rio do Sul / SC</span>
+          </div>
+
+          <div class="card-body">
+            <p><i class="fa-solid fa-calendar-day"></i> <strong>Data:</strong> 31 de Outubro de 2026 (Sábado)</p>
+            <p><i class="fa-solid fa-clock"></i> <strong>Horário:</strong> Bar abre às 17h | Festa às 18h</p>
+            <p><i class="fa-solid fa-map-pin"></i> <strong>Local:</strong> Tortuga Bar — Rua Ruy Barbosa, Rio do Sul/SC</p>
+            <p><i class="fa-solid fa-ticket"></i> <strong>Ingressos:</strong> Disponíveis via Sympla | Reservas: (47) 99680-4320</p>
+            <p><i class="fa-solid fa-skull"></i> <strong>Destaques:</strong> Venha fantasiado! 5 atrações rituais na floresta +18</p>
+            <p><i class="fa-solid fa-anchor"></i> <strong>Espaço:</strong> Tortuga Bar (Bar de temática pirata & Rock)</p>
+
+            <div class="lineup-box">
+              <h4>Atrações Confirmadas:</h4>
+              <div class="tags-bandas">
+                <span class="tag tag-headline"><i class="fa-solid fa-skull"></i> 5 Atrações Confirmadas</span>
+                <span class="tag"><i class="fa-solid fa-hourglass-half"></i> Em breve informações sobre as bandas!</span>
+              </div>
+            </div>
+
+            <a href="https://www.instagram.com/tortugaunderground/" target="_blank" class="btn btn-primary">
+              <i class="fa-brands fa-instagram"></i> Mais Infos
+            </a>
+          </div>
+        </article>
+
+        <!-- Evento 3: 2º Rock na Praça (07/11) -->
+        <article class="card event-card highlight">
+          <div class="poster-container" onclick="openPosterModal('2º Rock na Praça.jpg')">
+            <img src="2º Rock na Praça.jpg" alt="Cartaz Oficial 2º Rock na Praça" class="event-poster">
+            <div class="poster-overlay">
+              <i class="fa-solid fa-magnifying-glass-plus"></i> Clique para ampliar
+            </div>
+          </div>
+
+          <div class="card-header-bg">
+            <h3>2º Rock na Praça</h3>
+            <span class="sub-location"><i class="fa-solid fa-location-dot"></i> Videira / SC</span>
+          </div>
+
+          <div class="card-body">
+            <p><i class="fa-solid fa-calendar-day"></i> <strong>Data:</strong> 07 de Novembro de 2026 (Sábado)</p>
+            <p><i class="fa-solid fa-clock"></i> <strong>Horário:</strong> A partir das 14:30</p>
+            <p><i class="fa-solid fa-map-pin"></i> <strong>Local:</strong> Concha Acústica Ismael Felipe — Videira/SC</p>
+            <p><i class="fa-solid fa-ticket"></i> <strong>Entrada:</strong> EVENTO GRATUITO!</p>
+            <p><i class="fa-solid fa-cloud-rain"></i> <strong>Aviso:</strong> Em caso de chuva o evento será adiado.</p>
+
+            <div class="lineup-box">
+              <h4>Atrações Confirmadas:</h4>
+              <div class="tags-bandas">
+                <a href="#" onclick="showPage('bandas')" class="tag tag-headline"><i class="fa-solid fa-guitar"></i> Velha Guarda (Clássicos do Rock 70s a 2000s)</a>
+              </div>
+            </div>
+
+            <a href="https://www.instagram.com/velhaguarda.rock/" target="_blank" class="btn btn-primary">
+              <i class="fa-brands fa-instagram"></i> Mais Infos
+            </a>
+          </div>
+        </article>
+
+        <!-- Evento 4: 3º Brothers of Rock (28/11) -->
+        <article class="card event-card highlight">
+          <div class="poster-container" onclick="openPosterModal('3º Brothers of Rock.jpg')">
+            <img src="3º Brothers of Rock.jpg" alt="Cartaz Oficial 3º Brothers of Rock" class="event-poster">
+            <div class="poster-overlay">
+              <i class="fa-solid fa-magnifying-glass-plus"></i> Clique para ampliar
+            </div>
+          </div>
+
+          <div class="card-header-bg">
+            <h3>3º Brothers of Rock</h3>
+            <span class="sub-location"><i class="fa-solid fa-location-dot"></i> Luzerna / SC</span>
+          </div>
+
+          <div class="card-body">
+            <p><i class="fa-solid fa-calendar-day"></i> <strong>Data:</strong> 28 de Novembro de 2026 (Sábado)</p>
+            <p><i class="fa-solid fa-clock"></i> <strong>Horário:</strong> A partir das 18:00</p>
+            <p><i class="fa-solid fa-map-pin"></i> <strong>Local:</strong> Casarão Music — Luzerna/SC</p>
+            <p><i class="fa-solid fa-ticket"></i> <strong>Ingressos:</strong> Antecipado R$ 30,00</p>
+            <p><i class="fa-solid fa-handshake"></i> <strong>Parceria & Apoio:</strong> Paiol Rock Pub, Infocell e Riff Store Wear</p>
+
+            <div class="lineup-box">
+              <h4>Atrações Confirmadas:</h4>
+              <div class="tags-bandas">
+                <a href="#" onclick="showPage('bandas')" class="tag tag-headline"><i class="fa-solid fa-guitar"></i> SoulFire (Rock N' Roll)</a>
+                <a href="#" onclick="showPage('bandas')" class="tag"><i class="fa-solid fa-guitar"></i> Bad Decisions (Hard Rock)</a>
+                <a href="#" onclick="showPage('bandas')" class="tag"><i class="fa-solid fa-guitar"></i> Insanity (Heavy Metal)</a>
+                <a href="#" onclick="showPage('bandas')" class="tag"><i class="fa-solid fa-guitar"></i> Manga de Coleta (Rock N' Roll)</a>
+                <a href="#" onclick="showPage('bandas')" class="tag"><i class="fa-solid fa-guitar"></i> Warfield (Thrash Metal)</a>
+              </div>
+            </div>
+
+            <a href="https://www.instagram.com/brothersofrockbr/" target="_blank" class="btn btn-primary">
+              <i class="fa-brands fa-instagram"></i> Mais Infos
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- SEÇÃO 2: EVENTOS REALIZADOS -->
+    <section id="passados" class="page-section">
+      <div class="section-header">
+        <h2><i class="fa-solid fa-check-double"></i> Eventos Realizados</h2>
+        <p>Memória e arquivo das edições e shows que movimentaram a cena catarinense</p>
+      </div>
+
+      <div class="events-feed">
+
+        <!-- Evento Realizado 1: 5º Rocktobeer -->
+        <article class="card event-card past-event">
+          <div class="poster-container" onclick="openPosterModal('ROCK TO BEER.jpg')">
+            <img src="ROCK TO BEER.jpg" alt="Cartaz Oficial 5º Rocktobeer" class="event-poster">
+            <div class="poster-overlay">
+              <i class="fa-solid fa-magnifying-glass-plus"></i> Clique para ampliar
+            </div>
+          </div>
+
+          <div class="card-header-bg alt-bg2">
+            <h3>5º Rocktobeer</h3>
+            <span class="sub-location"><i class="fa-solid fa-location-dot"></i> Caçador / SC</span>
+          </div>
+
+          <div class="card-body">
+            <p><i class="fa-solid fa-calendar-day"></i> <strong>Data de Realização:</strong> 17 de Outubro de 2026 (Sábado)</p>
+            <p><i class="fa-solid fa-clock"></i> <strong>Horário:</strong> A partir das 20:00</p>
+            <p><i class="fa-solid fa-map-pin"></i> <strong>Local:</strong> Av. Antônio Comazzetto, 665 — Caçador/SC</p>
+            <p><i class="fa-solid fa-beer-mug-empty"></i> <strong>Destaque:</strong> Competição de Chopp e show especial das atrações</p>
+            <p><i class="fa-solid fa-motorcycle"></i> <strong>Organização:</strong> Moto Clube Dragões da Noite</p>
+
+            <div class="lineup-box">
+              <h4>Atrações que Tocaram:</h4>
+              <div class="tags-bandas">
+                <a href="#" onclick="showPage('bandas')" class="tag tag-headline"><i class="fa-solid fa-guitar"></i> Madner</a>
+                <a href="#" onclick="showPage('bandas')" class="tag"><i class="fa-solid fa-guitar"></i> Carrie Code</a>
+              </div>
+            </div>
+
+            <a href="https://www.instagram.com/dragoesdanoite.cacador/" target="_blank" class="btn btn-secondary">
+              <i class="fa-brands fa-instagram"></i> Mais Infos
+            </a>
+          </div>
+        </article>
+
+        <!-- Evento Realizado 2: Orquídea Negra (40 Anos) -->
+        <article class="card event-card past-event">
+          <div class="poster-container" onclick="openPosterModal('ORQUÍDEA NEGRA.jpg')">
+            <img src="ORQUÍDEA NEGRA.jpg" alt="Cartaz Orquídea Negra 40 Anos" class="event-poster">
+            <div class="poster-overlay">
+              <i class="fa-solid fa-magnifying-glass-plus"></i> Clique para ampliar
+            </div>
+          </div>
+
+          <div class="card-header-bg alt-bg2">
+            <h3>Orquídea Negra (40 Anos)</h3>
+            <span class="sub-location"><i class="fa-solid fa-location-dot"></i> Florianópolis / SC</span>
+          </div>
+
+          <div class="card-body">
+            <p><i class="fa-solid fa-calendar-day"></i> <strong>Data de Realização:</strong> 17 de Outubro de 2026 (Sábado)</p>
+            <p><i class="fa-solid fa-clock"></i> <strong>Horário:</strong> Matinê Metal a partir das 16h</p>
+            <p><i class="fa-solid fa-map-pin"></i> <strong>Local:</strong> Célula Showcase / Célula Cultural (Rod. João Paulo, 75)</p>
+            <p><i class="fa-solid fa-compact-disc"></i> <strong>Produção:</strong> Bruxa Verde Produções & Tumba do Faraó Discos</p>
+
+            <div class="lineup-box">
+              <h4>Atrações que Tocaram:</h4>
+              <div class="tags-bandas">
+                <a href="#" onclick="showPage('bandas')" class="tag tag-headline"><i class="fa-solid fa-guitar"></i> Orquídea Negra (40 Anos)</a>
+                <a href="#" onclick="showPage('bandas')" class="tag"><i class="fa-solid fa-guitar"></i> Syn TZ</a>
+                <a href="#" onclick="showPage('bandas')" class="tag"><i class="fa-solid fa-guitar"></i> Nightrider</a>
+              </div>
+            </div>
+
+            <a href="https://www.instagram.com/celulashowcase/" target="_blank" class="btn btn-secondary">
+              <i class="fa-brands fa-instagram"></i> Mais Infos
+            </a>
+          </div>
+        </article>
+
+        <!-- Evento Realizado 3: Floripa Punk Rock Fest -->
+        <article class="card event-card past-event">
+          <div class="poster-container" onclick="openPosterModal('Floripa Punk Rock Fest.jpg')">
+            <img src="Floripa Punk Rock Fest.jpg" alt="Cartaz Floripa Punk Rock Fest" class="event-poster">
+            <div class="poster-overlay">
+              <i class="fa-solid fa-magnifying-glass-plus"></i> Clique para ampliar
+            </div>
+          </div>
+
+          <div class="card-header-bg alt-bg2">
+            <h3>Floripa Punk Rock Fest</h3>
+            <span class="sub-location"><i class="fa-solid fa-location-dot"></i> Florianópolis / SC</span>
+          </div>
+
+          <div class="card-body">
+            <p><i class="fa-solid fa-calendar-day"></i> <strong>Data de Realização:</strong> 10 de Outubro de 2026 (Sábado)</p>
+            <p><i class="fa-solid fa-clock"></i> <strong>Horário:</strong> A partir das 16:00</p>
+            <p><i class="fa-solid fa-map-pin"></i> <strong>Local:</strong> Célula Showcase / Célula Cultural</p>
+            <p><i class="fa-solid fa-heart"></i> <strong>Entrada Solidária:</strong> Arrecadação de brinquedos e chocolates doados para a Casa Lar Luz do Caminho</p>
+
+            <div class="lineup-box">
+              <h4>Atrações que Tocaram:</h4>
+              <div class="tags-bandas">
+                <a href="#" onclick="showPage('bandas')" class="tag"><i class="fa-solid fa-guitar"></i> Amp'Line</a>
+                <a href="#" onclick="showPage('bandas')" class="tag"><i class="fa-solid fa-guitar"></i> Running4Nothing</a>
+                <a href="#" onclick="showPage('bandas')" class="tag"><i class="fa-solid fa-guitar"></i> Frente HC</a>
+                <a href="#" onclick="showPage('bandas')" class="tag"><i class="fa-solid fa-guitar"></i> A Última Certeza</a>
+              </div>
+            </div>
+
+            <a href="https://www.instagram.com/celulashowcase/" target="_blank" class="btn btn-secondary">
+              <i class="fa-brands fa-instagram"></i> Mais Infos
+            </a>
+          </div>
+        </article>
+
+        <!-- Evento Realizado 4: Encontro de Rock (Arena Milênio) -->
+        <article class="card event-card past-event">
+          <div class="poster-container" onclick="openPosterModal('Encontro de Rock.jpg')">
+            <img src="Encontro de Rock.jpg" alt="Cartaz Encontro de Rock - Arena Milênio" class="event-poster">
+            <div class="poster-overlay">
+              <i class="fa-solid fa-magnifying-glass-plus"></i> Clique para ampliar
+            </div>
+          </div>
+
+          <div class="card-header-bg alt-bg2">
+            <h3>Encontro de Rock</h3>
+            <span class="sub-location"><i class="fa-solid fa-location-dot"></i> Santa Cecília / SC</span>
+          </div>
+
+          <div class="card-body">
+            <p><i class="fa-solid fa-calendar-day"></i> <strong>Data de Realização:</strong> 09 de Outubro de 2026 (Sexta-feira)</p>
+            <p><i class="fa-solid fa-clock"></i> <strong>Horário:</strong> A partir das 23:00</p>
+            <p><i class="fa-solid fa-map-pin"></i> <strong>Local:</strong> Arena Milênio (R. Mário Sérgio Martins dos Santos, 446)</p>
+            <p><i class="fa-solid fa-ticket"></i> <strong>Ingressos:</strong> Antecipados R$ 35,00</p>
+            <p><i class="fa-solid fa-phone"></i> <strong>Reservas / Contato:</strong> (49) 9109-0266</p>
+            
+            <div class="lineup-box">
+              <h4>Atrações que Tocaram:</h4>
+              <div class="tags-bandas">
+                <a href="#" onclick="showPage('bandas')" class="tag"><i class="fa-solid fa-guitar"></i> Roxete Brasil</a>
+                <a href="#" onclick="showPage('bandas')" class="tag"><i class="fa-solid fa-guitar"></i> Advertência</a>
+              </div>
+            </div>
+
+            <a href="https://www.instagram.com/centrodeeventosmilenio/" target="_blank" class="btn btn-secondary">
+              <i class="fa-brands fa-instagram"></i> Mais Infos
+            </a>
+          </div>
+        </article>
+
+        <!-- Evento Realizado 5: Curitibanos Metal Fest II -->
+        <article class="card event-card past-event">
+          <div class="poster-container" onclick="openPosterModal('Curitibanos Metal Fest ll.jpg')">
+            <img src="Curitibanos Metal Fest ll.jpg" alt="Cartaz Oficial Curitibanos Metal Fest II" class="event-poster">
+            <div class="poster-overlay">
+              <i class="fa-solid fa-magnifying-glass-plus"></i> Clique para ampliar
+            </div>
+          </div>
+
+          <div class="card-header-bg alt-bg2">
+            <h3>Curitibanos Metal Fest II</h3>
+            <span class="sub-location"><i class="fa-solid fa-location-dot"></i> Curitibanos / SC</span>
+          </div>
+
+          <div class="card-body">
+            <p><i class="fa-solid fa-calendar-day"></i> <strong>Data de Realização:</strong> 08 de Agosto de 2026</p>
+            <p><i class="fa-solid fa-clock"></i> <strong>Horário:</strong> A partir das 16:00</p>
+            <p><i class="fa-solid fa-map-pin"></i> <strong>Local:</strong> Parque Pouso do Tropeiro (Entrada Lateral) — Curitibanos/SC</p>
+            <p><i class="fa-solid fa-beer-mug-empty"></i> <strong>Destaque:</strong> Open cooler, área de camping e muito metal autoral e tributo</p>
+
+            <div class="lineup-box">
+              <h4>Atrações que Tocaram:</h4>
+              <div class="tags-bandas">
+                <a href="#" onclick="showPage('bandas')" class="tag"><i class="fa-solid fa-guitar"></i> Velha Demência</a>
+                <a href="#" onclick="showPage('bandas')" class="tag"><i class="fa-solid fa-guitar"></i> Ossos</a>
+                <a href="#" onclick="showPage('bandas')" class="tag"><i class="fa-solid fa-guitar"></i> Primitive</a>
+                <a href="#" onclick="showPage('bandas')" class="tag"><i class="fa-solid fa-guitar"></i> Tyl 'Em All</a>
+                <a href="#" onclick="showPage('bandas')" class="tag"><i class="fa-solid fa-guitar"></i> Misanthrope</a>
+                <a href="#" onclick="showPage('bandas')" class="tag"><i class="fa-solid fa-guitar"></i> Kaiju</a>
+              </div>
+            </div>
+
+            <a href="https://www.instagram.com/ctbanosmetalfest/" target="_blank" class="btn btn-secondary">
+              <i class="fa-brands fa-instagram"></i> Mais Infos
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- SEÇÃO 3: BANDAS (ORDEM ALFABÉTICA DE A a Z) -->
+    <section id="bandas" class="page-section">
+      <div class="section-header">
+        <h2><i class="fa-solid fa-users-viewfinder"></i> Bandas</h2>
+        <p>Conheça os grupos independentes que movimentam a cena catarinense</p>
+      </div>
+
+      <div class="bands-grid" id="bandsContainer">
+
+        <!-- 1. A ÚLTIMA CERTEZA -->
+        <article class="card band-card" id="band-ultima-certeza">
+          <div class="band-avatar img-avatar">
+            <img src="A Última Certeza.jpg" alt="Logo A Última Certeza">
+          </div>
+          <h3>A ÚLTIMA CERTEZA</h3>
+          <span class="genre-tag">Hardcore Melódico</span>
+          <p class="city"><i class="fa-solid fa-location-dot"></i> Florianópolis / SC</p>
+          <p class="bio">Integrante do Floripa Punk Rock Fest, som visceral e letras marcantes fortalecendo o circuito autoral da capital.</p>
+          <div class="social-links">
+            <a href="https://open.spotify.com/intl-pt/artist/6kSWgigxhVqZIeYakUvoIC" target="_blank" title="Spotify"><i class="fa-brands fa-spotify"></i></a>
+            <a href="https://www.youtube.com/aultimacerteza" target="_blank" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </article>
+
+        <!-- 2. ADVERTÊNCIA -->
+        <article class="card band-card" id="band-advertencia">
+          <div class="band-avatar alt-avatar">
+            <i class="fa-solid fa-drum"></i>
+          </div>
+          <h3>ADVERTÊNCIA</h3>
+          <span class="genre-tag">Rock • Energia • Atitude</span>
+          <p class="city"><i class="fa-solid fa-location-dot"></i> Santa Cecília / SC</p>
+          <p class="bio">Sonoridade enérgica e atitude no palco, trazendo clássicos e hits do rock nacional e internacional para o público catarinense.</p>
+          <div class="social-links">
+            <a href="https://instagram.com" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+        </article>
+
+        <!-- 3. AMP'LINE -->
+        <article class="card band-card" id="band-ampline">
+          <div class="band-avatar">
+            <i class="fa-solid fa-volume-high"></i>
+          </div>
+          <h3>AMP'LINE</h3>
+          <span class="genre-tag">Punk Rock Autoral</span>
+          <p class="city"><i class="fa-solid fa-location-dot"></i> Florianópolis / SC</p>
+          <p class="bio">Banda autoral da Ilha de Santa Catarina, combinando a pegada clássica do Punk Rock com arranjos diretos e cheios de energia.</p>
+          <div class="social-links">
+            <a href="https://instagram.com" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+        </article>
+
+        <!-- 4. BAD DECISIONS -->
+        <article class="card band-card" id="band-bad-decisions">
+          <div class="band-avatar">
+            <i class="fa-solid fa-fire-flame-curved"></i>
+          </div>
+          <h3>BAD DECISIONS</h3>
+          <span class="genre-tag">Hard Rock</span>
+          <p class="city"><i class="fa-solid fa-location-dot"></i> Luzerna / Região - SC</p>
+          <p class="bio">Atração confirmada no 3º Brothers of Rock, trazendo a energia marcante e o peso clássico do Hard Rock.</p>
+          <div class="social-links">
+            <a href="https://instagram.com" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+        </article>
+
+        <!-- 5. CARRIE CODE -->
+        <article class="card band-card" id="band-carrie-code">
+          <div class="band-avatar alt-avatar">
+            <i class="fa-solid fa-skull-crossbones"></i>
+          </div>
+          <h3>CARRIE CODE</h3>
+          <span class="genre-tag">Hardcore & Punk</span>
+          <p class="city"><i class="fa-solid fa-location-dot"></i> Caçador / SC</p>
+          <p class="bio">Atração de abertura do 5º Rocktobeer. Som rápido, vocais rasgados e letras engajadas marcando a cena Hardcore e Punk regional.</p>
+          <div class="social-links">
+            <a href="https://instagram.com" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://youtube.com" target="_blank" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </article>
+
+        <!-- 6. DON CORLEONE -->
+        <article class="card band-card" id="band-don-corleone">
+          <div class="band-avatar">
+            <i class="fa-solid fa-hat-cowboy"></i>
+          </div>
+          <h3>DON CORLEONE</h3>
+          <span class="genre-tag">Rock 'n' Roll</span>
+          <p class="city"><i class="fa-solid fa-location-dot"></i> Caçador / SC</p>
+          <p class="bio">Atração confirmada no Halloween da Confraria do Rock, trazendo clássicos e a pegada marcante do Rock 'n' Roll.</p>
+          <div class="social-links">
+            <a href="https://instagram.com" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+        </article>
+
+        <!-- 7. FRENTE HC -->
+        <article class="card band-card" id="band-frente-hc">
+          <div class="band-avatar alt-avatar">
+            <i class="fa-solid fa-fist-raised"></i>
+          </div>
+          <h3>FRENTE HC</h3>
+          <span class="genre-tag">Hardcore</span>
+          <p class="city"><i class="fa-solid fa-location-dot"></i> Florianópolis / SC</p>
+          <p class="bio">Hardcore rápido e sem rodeios representando a resistência e a união da cena de Floripa.</p>
+          <div class="social-links">
+            <a href="https://instagram.com" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+        </article>
+
+        <!-- 8. INSANITY -->
+        <article class="card band-card" id="band-insanity">
+          <div class="band-avatar alt-avatar">
+            <i class="fa-solid fa-skull"></i>
+          </div>
+          <h3>INSANITY</h3>
+          <span class="genre-tag">Heavy Metal</span>
+          <p class="city"><i class="fa-solid fa-location-dot"></i> Luzerna / Região - SC</p>
+          <p class="bio">Integrante do cast do 3º Brothers of Rock no Casarão Music, apresentando riffs pesados e marcantes do Heavy Metal tradicional.</p>
+          <div class="social-links">
+            <a href="https://instagram.com" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+        </article>
+
+        <!-- 9. KAIJU -->
+        <article class="card band-card" id="band-kaiju">
+          <div class="band-avatar alt-avatar">
+            <i class="fa-solid fa-skull-crossbones"></i>
+          </div>
+          <h3>KAIJU</h3>
+          <span class="genre-tag">Tributo ao Gojira</span>
+          <p class="city"><i class="fa-solid fa-location-dot"></i> Curitibanos / SC</p>
+          <p class="bio">Atração do Curitibanos Metal Fest II, trazendo o peso e a precisão do Metal Moderno em tributo ao Gojira.</p>
+          <div class="social-links">
+            <a href="https://instagram.com" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+        </article>
+
+        <!-- 10. MADNER -->
+        <article class="card band-card" id="band-madner">
+          <div class="band-avatar">
+            <i class="fa-solid fa-bolt"></i>
+          </div>
+          <h3>MADNER</h3>
+          <span class="genre-tag">Heavy & Rock 'n' Roll</span>
+          <p class="city"><i class="fa-solid fa-location-dot"></i> Caçador / SC</p>
+          <p class="bio">Banda principal do 5º Rocktobeer, trazendo clássicos e autorais com o peso do Heavy Metal e a energia do Rock clássico.</p>
+          <div class="social-links">
+            <a href="https://instagram.com" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://spotify.com" target="_blank" title="Spotify"><i class="fa-brands fa-spotify"></i></a>
+          </div>
+        </article>
+
+        <!-- 11. MANGA DE COLETA -->
+        <article class="card band-card" id="band-manga-de-coleta">
+          <div class="band-avatar">
+            <i class="fa-solid fa-guitar"></i>
+          </div>
+          <h3>MANGA DE COLETA</h3>
+          <span class="genre-tag">Rock N' Roll</span>
+          <p class="city"><i class="fa-solid fa-location-dot"></i> Luzerna / Região - SC</p>
+          <p class="bio">Sonoridade autêntica celebrando o Rock N' Roll no palco do 3º Brothers of Rock.</p>
+          <div class="social-links">
+            <a href="https://instagram.com" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+        </article>
+
+        <!-- 12. MISANTHROPE -->
+        <article class="card band-card" id="band-misanthrope">
+          <div class="band-avatar alt-avatar">
+            <i class="fa-solid fa-biohazard"></i>
+          </div>
+          <h3>MISANTHROPE</h3>
+          <span class="genre-tag">Tributo ao Death</span>
+          <p class="city"><i class="fa-solid fa-location-dot"></i> Curitibanos / SC</p>
+          <p class="bio">Tributo ao lendário Death, levando a agressividade do Death Metal para o palco do Curitibanos Metal Fest II.</p>
+          <div class="social-links">
+            <a href="https://instagram.com" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+        </article>
+
+        <!-- 13. NIGHTRIDER -->
+        <article class="card band-card" id="band-nightrider">
+          <div class="band-avatar">
+            <i class="fa-solid fa-motorcycle"></i>
+          </div>
+          <h3>NIGHTRIDER</h3>
+          <span class="genre-tag">Heavy / Speed Metal</span>
+          <p class="city"><i class="fa-solid fa-location-dot"></i> Joinville / SC</p>
+          <p class="bio">Power trio de Joinville resgatando a essência mais crua e rápida do Speed Metal oitentista alemão, com influências diretas de Running Wild e Grave Digger.</p>
+          <div class="social-links">
+            <a href="https://instagram.com" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+        </article>
+
+        <!-- 14. ORQUÍDEA NEGRA -->
+        <article class="card band-card" id="band-orquidea">
+          <div class="band-avatar">
+            <i class="fa-solid fa-crown"></i>
+          </div>
+          <h3>ORQUÍDEA NEGRA</h3>
+          <span class="genre-tag">Heavy Metal Tradicional (40 Anos)</span>
+          <p class="city"><i class="fa-solid fa-location-dot"></i> Lages / Florianópolis / SC</p>
+          <p class="bio">Pioneiros do Heavy Metal catarinense, autores do histórico LP "Who's Dead". Lenda viva do metal com 40 anos de estrada que inspirou o "Dia do Heavy Metal Catarinense" na ALESC.</p>
+          <div class="social-links">
+            <a href="https://instagram.com" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://spotify.com" target="_blank" title="Spotify"><i class="fa-brands fa-spotify"></i></a>
+          </div>
+        </article>
+
+        <!-- 15. OSSOS -->
+        <article class="card band-card" id="band-ossos">
+          <div class="band-avatar">
+            <i class="fa-solid fa-bone"></i>
+          </div>
+          <h3>OSSOS</h3>
+          <span class="genre-tag">Thrash Metal</span>
+          <p class="city"><i class="fa-solid fa-location-dot"></i> Curitibanos / SC</p>
+          <p class="bio">Sonoridade veloz, riffs pesados e a pura essência do Thrash Metal no Curitibanos Metal Fest II.</p>
+          <div class="social-links">
+            <a href="https://instagram.com" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+        </article>
+
+        <!-- 16. PAPA'S RADIO -->
+        <article class="card band-card" id="band-papas-radio">
+          <div class="band-avatar alt-avatar">
+            <i class="fa-solid fa-radio"></i>
+          </div>
+          <h3>PAPA'S RADIO</h3>
+          <span class="genre-tag">Rock / Classic Rock</span>
+          <p class="city"><i class="fa-solid fa-location-dot"></i> Caçador / SC</p>
+          <p class="bio">Banda confirmada no cast do Halloween Confraria do Rock, levando muita energia e som autêntico para o palco.</p>
+          <div class="social-links">
+            <a href="https://instagram.com" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+        </article>
+
+        <!-- 17. PRIMITIVE -->
+        <article class="card band-card" id="band-primitive">
+          <div class="band-avatar alt-avatar">
+            <i class="fa-solid fa-fist-raised"></i>
+          </div>
+          <h3>PRIMITIVE</h3>
+          <span class="genre-tag">Thrash Metal</span>
+          <p class="city"><i class="fa-solid fa-location-dot"></i> Curitibanos / SC</p>
+          <p class="bio">Thrash Metal direto e agressivo agitating o público do Curitibanos Metal Fest II.</p>
+          <div class="social-links">
+            <a href="https://instagram.com" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+        </article>
+
+        <!-- 18. ROXETE BRASIL -->
+        <article class="card band-card" id="band-roxete">
+          <div class="band-avatar">
+            <i class="fa-solid fa-compact-disc"></i>
+          </div>
+          <h3>ROXETE BRASIL</h3>
+          <span class="genre-tag">Pop Rock & Clássicos</span>
+          <p class="city"><i class="fa-solid fa-location-dot"></i> Santa Cecília / SC</p>
+          <p class="bio">Tributo ao duo Roxette e grandes clássicos do Rock internacional, garantindo show marcante nos palcos do estado.</p>
+          <div class="social-links">
+            <a href="https://instagram.com" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+        </article>
+
+        <!-- 19. RUNNING4NOTHING -->
+        <article class="card band-card" id="band-running4nothing">
+          <div class="band-avatar">
+            <i class="fa-solid fa-fire"></i>
+          </div>
+          <h3>RUNNING4NOTHING</h3>
+          <span class="genre-tag">Punk Rock / Melódico</span>
+          <p class="city"><i class="fa-solid fa-location-dot"></i> Florianópolis / SC</p>
+          <p class="bio">Velocidade, melodia e atitude marcante nos palcos, sendo uma das fortes referências do Punk/Hardcore da região.</p>
+          <div class="social-links">
+            <a href="https://instagram.com" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+        </article>
+
+        <!-- 20. SOULFIRE -->
+        <article class="card band-card" id="band-soulfire">
+          <div class="band-avatar">
+            <i class="fa-solid fa-fire"></i>
+          </div>
+          <h3>SOULFIRE</h3>
+          <span class="genre-tag">Rock N' Roll</span>
+          <p class="city"><i class="fa-solid fa-location-dot"></i> Luzerna / Região - SC</p>
+          <p class="bio">Uma das grandes atrações do 3º Brothers of Rock no Casarão Music, trazendo clássicos e a verdadeira chama do Rock N' Roll.</p>
+          <div class="social-links">
+            <a href="https://instagram.com" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+        </article>
+
+        <!-- 21. SYN TZ -->
+        <article class="card band-card" id="band-syntz">
+          <div class="band-avatar alt-avatar">
+            <i class="fa-solid fa-bolt"></i>
+          </div>
+          <h3>SYN TZ</h3>
+          <span class="genre-tag">Heavy Metal / Power Metal</span>
+          <p class="city"><i class="fa-solid fa-location-dot"></i> Balneário Camboriú / SC</p>
+          <p class="bio">Formada em 2012 por veteranos da cena dos anos 90. Autores do álbum "Heavy Load" e colaboração com o lendário Tim "Ripper" Owens no lançamento "Dawn of the New Dark Ages".</p>
+          <div class="social-links">
+            <a href="https://instagram.com" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://spotify.com" target="_blank" title="Spotify"><i class="fa-brands fa-spotify"></i></a>
+          </div>
+        </article>
+
+        <!-- 22. TYL 'EM ALL -->
+        <article class="card band-card" id="band-tyl-em-all">
+          <div class="band-avatar">
+            <i class="fa-solid fa-guitar"></i>
+          </div>
+          <h3>TYL 'EM ALL</h3>
+          <span class="genre-tag">Tributo ao Metallica</span>
+          <p class="city"><i class="fa-solid fa-location-dot"></i> Curitibanos / SC</p>
+          <p class="bio">Tributo fiel aos clássicos e à energia do Metallica no Curitibanos Metal Fest II.</p>
+          <div class="social-links">
+            <a href="https://instagram.com" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+        </article>
+
+        <!-- 23. VELHA DEMÊNCIA -->
+        <article class="card band-card" id="band-velha-demencia">
+          <div class="band-avatar alt-avatar">
+            <i class="fa-solid fa-bolt"></i>
+          </div>
+          <h3>VELHA DEMÊNCIA</h3>
+          <span class="genre-tag">Alternative Crossover</span>
+          <p class="city"><i class="fa-solid fa-location-dot"></i> Curitibanos / SC</p>
+          <p class="bio">Misturando peso e atitude no Crossover Alternativo, atração do Curitibanos Metal Fest II.</p>
+          <div class="social-links">
+            <a href="https://instagram.com" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+        </article>
+
+        <!-- 24. VELHA GUARDA -->
+        <article class="card band-card" id="band-velha-guarda">
+          <div class="band-avatar alt-avatar">
+            <i class="fa-solid fa-record-vinyl"></i>
+          </div>
+          <h3>VELHA GUARDA</h3>
+          <span class="genre-tag">Classic Rock (70s a 2000s)</span>
+          <p class="city"><i class="fa-solid fa-location-dot"></i> Videira / SC</p>
+          <p class="bio">Atração principal do 2º Rock na Praça na Concha Acústica Ismael Felipe, trazendo clássicos do rock que atravessam gerações.</p>
+          <div class="social-links">
+            <a href="https://www.instagram.com/velhaguarda.rock/" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+        </article>
+
+        <!-- 25. WARFIELD -->
+        <article class="card band-card" id="band-warfield">
+          <div class="band-avatar alt-avatar">
+            <i class="fa-solid fa-biohazard"></i>
+          </div>
+          <h3>WARFIELD</h3>
+          <span class="genre-tag">Thrash Metal</span>
+          <p class="city"><i class="fa-solid fa-location-dot"></i> Luzerna / Região - SC</p>
+          <p class="bio">Velocidade, peso e agressividade do Thrash Metal representando o peso extremo da noite no 3º Brothers of Rock.</p>
+          <div class="social-links">
+            <a href="https://instagram.com" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- SEÇÃO 4: FORMULÁRIO DE CADASTRO DE BANDA -->
+    <section id="cadastro-banda" class="page-section">
+      <div class="section-header">
+        <h2><i class="fa-solid fa-plus-circle"></i> Cadastrar Nova Banda</h2>
+        <p>Faça parte do ecossistema do SC Underground e seja visto pelos organizadores de eventos</p>
+      </div>
+
+      <div class="form-container">
+        <form id="bandForm" onsubmit="handleCadastrarBanda(event)">
+          <div class="form-group">
+            <label for="nomeBanda">Nome da Banda *</label>
+            <input type="text" id="nomeBanda" placeholder="Ex: Madner" required>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="estilo">Gênero / Estilo Musical *</label>
+              <input type="text" id="estilo" placeholder="Ex: Heavy & Rock'n Roll" required>
+            </div>
+            <div class="form-group">
+              <label for="cidade">Cidade / UF *</label>
+              <input type="text" id="cidade" placeholder="Ex: Caçador / SC" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="bio">Biografia / Descrição da Banda *</label>
+            <textarea id="bio" rows="4" placeholder="Conte brevemente a história da banda, integrantes e sonoridade..." required></textarea>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="linkInstagram">Link do Instagram</label>
+              <input type="url" id="linkInstagram" placeholder="https://instagram.com/suabanda">
+            </div>
+            <div class="form-group">
+              <label for="linkSpotify">Link do Spotify / Soundcloud</label>
+              <input type="url" id="linkSpotify" placeholder="https://spotify.com/artist/...">
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block"><i class="fa-solid fa-paper-plane"></i> Cadastrar Banda na Plataforma</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- MODAL / LIGHTBOX PARA EXPANDIR O CARTAZ -->
+  <div id="posterModal" class="modal" onclick="closePosterModal(event)">
+    <span class="close-modal">&times;</span>
+    <img class="modal-content" id="imgExpanded">
+  </div>
+
+  <footer>
+    <div class="footer-content">
+      <p><strong>SC Underground</strong> — Plataforma Colaborativa de Apoio à Cultura Autoral</p>
+      <p>Projeto de Extensão do Curso de Sistemas de Informação | Fomento e Divulgação dos Eventos de Rock em SC</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
