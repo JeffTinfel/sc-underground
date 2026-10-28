@@ -22,7 +22,6 @@
           <li><a href="#" class="nav-link active" onclick="showPage('agenda')"><i class="fa-solid fa-calendar-days"></i> Próximos Eventos</a></li>
           <li><a href="#" class="nav-link" onclick="showPage('passados')"><i class="fa-solid fa-clock-rotate-left"></i> Eventos Realizados</a></li>
           <li><a href="#" class="nav-link" onclick="showPage('bandas')"><i class="fa-solid fa-guitar"></i> Bandas</a></li>
-          <li><a href="#" class="nav-link btn-nav" onclick="showPage('cadastro-banda')"><i class="fa-solid fa-plus"></i> Cadastrar Banda</a></li>
         </ul>
       </nav>
     </div>
@@ -622,7 +621,7 @@
           <h3>PRIMITIVE</h3>
           <span class="genre-tag">Thrash Metal</span>
           <p class="city"><i class="fa-solid fa-location-dot"></i> Curitibanos / SC</p>
-          <p class="bio">Thrash Metal direto e agressivo agitating o público do Curitibanos Metal Fest II.</p>
+          <p class="bio">Thrash Metal direto e agressivo agitando o público do Curitibanos Metal Fest II.</p>
           <div class="social-links">
             <a href="https://instagram.com" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
           </div>
@@ -741,52 +740,6 @@
           </div>
         </article>
 
-      </div>
-    </section>
-
-    <!-- SEÇÃO 4: FORMULÁRIO DE CADASTRO DE BANDA -->
-    <section id="cadastro-banda" class="page-section">
-      <div class="section-header">
-        <h2><i class="fa-solid fa-plus-circle"></i> Cadastrar Nova Banda</h2>
-        <p>Faça parte do ecossistema do SC Underground e seja visto pelos organizadores de eventos</p>
-      </div>
-
-      <div class="form-container">
-        <form id="bandForm" onsubmit="handleCadastrarBanda(event)">
-          <div class="form-group">
-            <label for="nomeBanda">Nome da Banda *</label>
-            <input type="text" id="nomeBanda" placeholder="Ex: Madner" required>
-          </div>
-
-          <div class="form-row">
-            <div class="form-group">
-              <label for="estilo">Gênero / Estilo Musical *</label>
-              <input type="text" id="estilo" placeholder="Ex: Heavy & Rock'n Roll" required>
-            </div>
-            <div class="form-group">
-              <label for="cidade">Cidade / UF *</label>
-              <input type="text" id="cidade" placeholder="Ex: Caçador / SC" required>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label for="bio">Biografia / Descrição da Banda *</label>
-            <textarea id="bio" rows="4" placeholder="Conte brevemente a história da banda, integrantes e sonoridade..." required></textarea>
-          </div>
-
-          <div class="form-row">
-            <div class="form-group">
-              <label for="linkInstagram">Link do Instagram</label>
-              <input type="url" id="linkInstagram" placeholder="https://instagram.com/suabanda">
-            </div>
-            <div class="form-group">
-              <label for="linkSpotify">Link do Spotify / Soundcloud</label>
-              <input type="url" id="linkSpotify" placeholder="https://spotify.com/artist/...">
-            </div>
-          </div>
-
-          <button type="submit" class="btn btn-primary btn-block"><i class="fa-solid fa-paper-plane"></i> Cadastrar Banda na Plataforma</button>
-        </form>
       </div>
     </section>
 
